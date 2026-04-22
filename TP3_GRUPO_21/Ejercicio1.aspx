@@ -15,10 +15,23 @@
             <br />
             <asp:Label ID="lblNombreLocalidad" runat="server" Text="Nombre de Localidad: "></asp:Label>
             <asp:TextBox ID="txtLocalidad" runat="server" Width="206px"></asp:TextBox>
-            <asp:RequiredFieldValidator ID="rdvLocalidad" runat="server" ControlToValidate="txtLocalidad" ErrorMessage="Ingrese una Localidad"></asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator 
+                ID="rdvLocalidad" runat="server" 
+                ControlToValidate="txtLocalidad" ErrorMessage="Ingrese una Localidad" 
+                ValidationGroup="GrupoLocalidad" ForeColor="Red">Ingrese una localidad
+            </asp:RequiredFieldValidator>
+            <asp:CustomValidator
+                ID="cvLocalidad" runat="server" 
+                ControlToValidate="txtLocalidad" ErrorMessage="La localidad ya existe" 
+                OnServerValidate="cvLocalidad_ServerValidate" 
+                ValidationGroup="GrupoLocalidad" ForeColor="Red">La localidad ya existe
+            </asp:CustomValidator>
             <br />
             <br />
-            <asp:Button ID="btnGuardarLoc" runat="server"  Text="Guardar Localidad" OnClick="btnGuardarLoc_Click" />
+            <asp:Button ID="btnGuardarLoc" runat="server"  Text="Guardar Localidad" OnClick="btnGuardarLoc_Click" ValidationGroup="GrupoLocalidad" />
+            <br />
+            <br />
+            <asp:DropDownList ID="ddlLocalidades" runat="server" Width="200px"></asp:DropDownList>
         </div>
     </form>
 </body>

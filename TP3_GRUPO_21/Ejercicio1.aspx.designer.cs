@@ -60,6 +60,15 @@ namespace TP3_GRUPO_21
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rdvLocalidad;
 
         /// <summary>
+        /// Control cvLocalidad.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator cvLocalidad;
+
+        /// <summary>
         /// Control btnGuardarLoc.
         /// </summary>
         /// <remarks>
@@ -67,5 +76,14 @@ namespace TP3_GRUPO_21
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnGuardarLoc;
+
+        /// <summary>
+        /// Control ddlLocalidades.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlLocalidades;
     }
 }
