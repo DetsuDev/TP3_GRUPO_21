@@ -14,9 +14,29 @@ namespace TP3_GRUPO_21
             ValidationSettings.UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
         }
 
+        protected void cvLocalidad_ServerValidate(object source, ServerValidateEventArgs args)
+        {
+            string nuevaLoc = args.Value.Trim().ToLower();
+            bool duplicado = false;
+
+            foreach (ListItem item in ddlLocalidades.Items)
+            {
+                if (item.Text.Trim().ToLower() == nuevaLoc)
+                {
+                    duplicado = true;
+                    break;
+                }
+            }
+            args.IsValid = !duplicado;
+        }
+
         protected void btnGuardarLoc_Click(object sender, EventArgs e)
         {
-            btnGuardarLoc.Text = "Validacion Correcta!";
+            if (Page.IsValid)
+            {
+                ddlLocalidades.Items.Add(new ListItem(txtLocalidad.Text.Trim()));
+                btnGuardarLoc.Text = "Validacion Correcta!";
+            }
         }
     }
 }
