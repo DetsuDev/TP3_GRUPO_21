@@ -6,15 +6,59 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+        .auto-style2 {
+            width: 166px;
+        }
+        .auto-style3 {
+            width: 152px;
+        }
+        .auto-style4 {
+            width: 152px;
+            height: 26px;
+        }
+        .auto-style5 {
+            width: 166px;
+            height: 26px;
+        }
+        .auto-style6 {
+            height: 26px;
+        }
+        .auto-style7 {
+            width: 152px;
+            height: 23px;
+        }
+        .auto-style8 {
+            width: 166px;
+            height: 23px;
+        }
+        .auto-style9 {
+            height: 23px;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
+            <table class="auto-style1">
+                <tr>
+                    <td class="auto-style3">&nbsp;</td>
+                    <td class="auto-style2">
             <asp:Label ID="lblLocalidades" runat="server" Font-Bold="True" Text="Localidades"></asp:Label>
-            <br />
-            <br />
+                    </td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="auto-style3">
             <asp:Label ID="lblNombreLocalidad" runat="server" Text="Nombre de Localidad: "></asp:Label>
+                    </td>
+                    <td class="auto-style2">
             <asp:TextBox ID="txtLocalidad" runat="server" Width="206px"></asp:TextBox>
+                    </td>
+                    <td>
             <asp:RequiredFieldValidator 
                 ID="rdvLocalidad" runat="server" 
                 ControlToValidate="txtLocalidad" ErrorMessage="Ingrese una Localidad" 
@@ -26,12 +70,85 @@
                 OnServerValidate="cvLocalidad_ServerValidate" 
                 ValidationGroup="GrupoLocalidad" ForeColor="Red">La localidad ya existe
             </asp:CustomValidator>
-            <br />
-            <br />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style3">&nbsp;</td>
+                    <td class="auto-style2">
             <asp:Button ID="btnGuardarLoc" runat="server"  Text="Guardar Localidad" OnClick="btnGuardarLoc_Click" ValidationGroup="GrupoLocalidad" />
-            <br />
-            <br />
+                    </td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="auto-style3">&nbsp;</td>
+                    <td class="auto-style2">&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="auto-style3">&nbsp;</td>
+                    <td class="auto-style2" style="font-weight: bold;">Usuarios</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="auto-style3">Nombre usuario:</td>
+                    <td class="auto-style2" style="font-weight: bold;">
+            <asp:TextBox ID="txtUsuario" runat="server" Width="206px"></asp:TextBox>
+                    </td>
+                    <td>
+                        <asp:RequiredFieldValidator ID="rfvUsuario" runat="server" ControlToValidate="txtUsuario" ErrorMessage="Ingrese un usuario" ForeColor="Red"></asp:RequiredFieldValidator>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style4">Contraseña</td>
+                    <td class="auto-style5">
+            <asp:TextBox ID="txtPassword" runat="server" Width="206px"></asp:TextBox>
+                    </td>
+                    <td class="auto-style6">
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtPassword" ErrorMessage="Ingrese una contraseña" ForeColor="Red"></asp:RequiredFieldValidator>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style7">Repetir contraseña</td>
+                    <td class="auto-style8">
+                        <asp:TextBox ID="txtRepetirPassword" runat="server" Width="205px"></asp:TextBox>
+                    </td>
+                    <td class="auto-style9">
+                        <asp:CompareValidator ID="cvRepetirPassword" runat="server" ControlToCompare="txtPassword" ControlToValidate="txtRepetirPassword" ErrorMessage="Las contraseñas no son iguales" ForeColor="Red"></asp:CompareValidator>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style4"></td>
+                    <td class="auto-style5">
             <asp:DropDownList ID="ddlLocalidades" runat="server" Width="200px"></asp:DropDownList>
+                    </td>
+                    <td class="auto-style6"></td>
+                </tr>
+                <tr>
+                    <td class="auto-style7"></td>
+                    <td class="auto-style8"></td>
+                    <td class="auto-style9"></td>
+                </tr>
+                <tr>
+                    <td class="auto-style3">&nbsp;</td>
+                    <td class="auto-style2">&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="auto-style3">&nbsp;</td>
+                    <td class="auto-style2">&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="auto-style3">&nbsp;</td>
+                    <td class="auto-style2">&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="auto-style3">&nbsp;</td>
+                    <td class="auto-style2">&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+            </table>
         </div>
     </form>
 </body>
