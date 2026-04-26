@@ -101,7 +101,7 @@
                 <tr>
                     <td class="auto-style4">Contraseña</td>
                     <td class="auto-style5">
-            <asp:TextBox ID="txtPassword" runat="server" Width="206px"></asp:TextBox>
+            <asp:TextBox ID="txtPassword" runat="server" Width="206px" TextMode="Password"></asp:TextBox>
                     </td>
                     <td class="auto-style6">
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtPassword" ErrorMessage="Ingrese una contraseña" ForeColor="Red"></asp:RequiredFieldValidator>
@@ -110,7 +110,7 @@
                 <tr>
                     <td class="auto-style7">Repetir contraseña</td>
                     <td class="auto-style8">
-                        <asp:TextBox ID="txtRepetirPassword" runat="server" Width="205px"></asp:TextBox>
+                        <asp:TextBox ID="txtRepetirPassword" runat="server" TextMode="Password" Width="205px"></asp:TextBox>
                     </td>
                     <td class="auto-style9">
                         <asp:CompareValidator ID="cvRepetirPassword" runat="server" ControlToCompare="txtPassword" ControlToValidate="txtRepetirPassword" ErrorMessage="Las contraseñas no son iguales" ForeColor="Red"></asp:CompareValidator>
@@ -125,7 +125,9 @@
                 </tr>
                 <tr>
                     <td class="auto-style7"></td>
-                    <td class="auto-style8"></td>
+                    <td class="auto-style8">
+                        <asp:Button ID="btnGuardarUsuario" runat="server" Text="Guardar usuario" />
+                    </td>
                     <td class="auto-style9"></td>
                 </tr>
                 <tr>
