@@ -35,8 +35,12 @@ namespace TP3_GRUPO_21
             if (Page.IsValid)
             {
                 ddlLocalidades.Items.Add(new ListItem(txtLocalidad.Text.Trim()));
-                btnGuardarLoc.Text = "Validacion Correcta!";
             }
+        }
+
+        protected void btnGuardarUsuario_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
