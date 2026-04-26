@@ -13,7 +13,17 @@ namespace TP3_GRUPO_21
         {
             ValidationSettings.UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
         }
-
+        protected void btnInicio_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Inicio.aspx");
+        }
+        protected void btnGuardarUsuario_Click(object sender, EventArgs e)
+        {
+            if (Page.IsValid)
+            {
+                lblBienvenido.Text = "Bienvenido " + txtUsuario.Text;
+            }
+        }
         protected void cvLocalidad_ServerValidate(object source, ServerValidateEventArgs args)
         {
             string nuevaLoc = args.Value.Trim().ToLower();
@@ -38,9 +48,6 @@ namespace TP3_GRUPO_21
             }
         }
 
-        protected void btnGuardarUsuario_Click(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }
