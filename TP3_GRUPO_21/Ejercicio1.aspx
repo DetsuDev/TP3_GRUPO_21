@@ -11,7 +11,7 @@
             width: 100%;
         }
         .auto-style2 {
-            width: 166px;
+            width: 251px;
         }
         .auto-style3 {
             width: 152px;
@@ -21,7 +21,7 @@
             height: 26px;
         }
         .auto-style5 {
-            width: 166px;
+            width: 251px;
             height: 26px;
         }
         .auto-style6 {
@@ -32,7 +32,7 @@
             height: 23px;
         }
         .auto-style8 {
-            width: 166px;
+            width: 251px;
             height: 23px;
         }
         .auto-style9 {
@@ -89,12 +89,16 @@
                 <tr>
                     <td class="auto-style3">&nbsp;</td>
                     <td class="auto-style2">
-                        <asp:Button ID="btnGuardarLoc" runat="server" Text="Guardar Localidad" OnClick="btnGuardarLoc_Click" ValidationGroup="GrupoLocalidad" />
+                        <asp:Button ID="btnGuardarLoc" runat="server" Text="Guardar Localidad" OnClick="btnGuardarLoc_Click" ValidationGroup="GrupoLocalidad" Width="125px" />
+                        <asp:Button ID="btnEliminarLocalidad" runat="server" OnClick="btnEliminarLocalidad_Click" Text="Eliminar Localidad" Width="117px" ValidationGroup="GrupoEliminar" />
                     </td>
                     <td class="auto-style10">
                         <asp:Label ID="lblCantLocalidades" runat="server" ForeColor="Gray"></asp:Label>
                     </td>
-                    <td>&nbsp;</td>
+                    <td>
+                        <asp:CustomValidator ID="CustomValidator1" runat="server" ErrorMessage="No existe la localidad a eliminar" ForeColor="Red" OnServerValidate="CustomValidator1_ServerValidate" ValidationGroup="GrupoEliminar"></asp:CustomValidator>
+                        <asp:Label ID="lblLocalEliminada" runat="server" ForeColor="#009933"></asp:Label>
+                    </td>
                 </tr>
                 <tr>
                     <td class="auto-style3">&nbsp;</td>

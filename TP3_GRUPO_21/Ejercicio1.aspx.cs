@@ -61,5 +61,41 @@ namespace TP3_GRUPO_21
             lblBienvenido.Text = "";
         }
 
+        protected void btnEliminarLocalidad_Click(object sender, EventArgs e)
+        {
+            string localidadEliminada = txtLocalidad.Text;
+
+            foreach (ListItem item in ddlLocalidades.Items) 
+            {
+                if (item.ToString() == localidadEliminada)
+                {
+                    ddlLocalidades.Items.Remove(ddlLocalidades.Items.FindByText(item.Text));
+                    lblCantLocalidades.Text = "Localidades cargadas: " + (ddlLocalidades.Items.Count - 1);
+                    lblLocalEliminada.Text = "Localidad eliminada exitosamente";
+                    txtLocalidad.Text = "";
+                    return;
+                }
+
+
+            }
+
+        }
+
+        protected void CustomValidator1_ServerValidate(object source, ServerValidateEventArgs args)
+        {
+            bool valido = false;
+            foreach(ListItem item in ddlLocalidades.Items)
+            {
+                if(item.ToString() == txtLocalidad.Text)
+                {
+                    valido = true;
+                }
+            }
+            if(!valido)
+            {
+                lblLocalEliminada.Text = "";
+            }
+            args.IsValid = valido;
+        }
     }
 }
