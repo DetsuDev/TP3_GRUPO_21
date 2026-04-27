@@ -73,9 +73,8 @@
                     <td class="auto-style10">
                         <asp:RequiredFieldValidator 
                             ID="rdvLocalidad" runat="server" 
-                            ControlToValidate="txtLocalidad" ErrorMessage="Ingrese una Localidad" 
-                            ValidationGroup="GrupoLocalidad" ForeColor="Red">Ingrese una localidad
-                        </asp:RequiredFieldValidator>
+                            ControlToValidate="txtLocalidad" ErrorMessage="ingrese localidad" 
+                            ValidationGroup="GrupoLocalidad" ForeColor="Red">ingrese localidad</asp:RequiredFieldValidator>
                     </td>
                     <td>
                         <asp:CustomValidator
@@ -165,7 +164,7 @@
                         <asp:RequiredFieldValidator ID="rfvCP" runat="server" ControlToValidate="txtCP" ErrorMessage="Ingrese el CP" ForeColor="Red"></asp:RequiredFieldValidator>
                     </td>
                     <td class="auto-style6">
-                        <asp:RegularExpressionValidator ID="revCP" runat="server" ControlToValidate="txtCP" ErrorMessage="El CP debe tener 4 dígitos" ForeColor="Red" ValidationExpression="^\d{4}$">El CP debe tener 4 dígitos</asp:RegularExpressionValidator>
+                        <asp:RegularExpressionValidator ID="revCP" runat="server" ControlToValidate="txtCP" ErrorMessage="El CP debe ser numerico y de 4 digitos" ForeColor="Red" ValidationExpression="^\d{4}$">EL CP debe ser numerico y de 4 digitos</asp:RegularExpressionValidator>
                     </td>
                 </tr>
                 <tr>
