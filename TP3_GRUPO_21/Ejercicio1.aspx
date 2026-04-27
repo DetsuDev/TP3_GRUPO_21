@@ -11,7 +11,7 @@
             width: 100%;
         }
         .auto-style2 {
-            width: 251px;
+            width: 267px;
         }
         .auto-style3 {
             width: 152px;
@@ -21,7 +21,7 @@
             height: 26px;
         }
         .auto-style5 {
-            width: 251px;
+            width: 267px;
             height: 26px;
         }
         .auto-style6 {
@@ -32,7 +32,7 @@
             height: 23px;
         }
         .auto-style8 {
-            width: 251px;
+            width: 267px;
             height: 23px;
         }
         .auto-style9 {
@@ -90,7 +90,7 @@
                     <td class="auto-style3">&nbsp;</td>
                     <td class="auto-style2">
                         <asp:Button ID="btnGuardarLoc" runat="server" Text="Guardar Localidad" OnClick="btnGuardarLoc_Click" ValidationGroup="GrupoLocalidad" Width="125px" />
-                        <asp:Button ID="btnEliminarLocalidad" runat="server" OnClick="btnEliminarLocalidad_Click" Text="Eliminar Localidad" Width="117px" ValidationGroup="GrupoEliminar" />
+                        <asp:Button ID="btnEliminarLocalidad" runat="server" OnClick="btnEliminarLocalidad_Click" Text="Eliminar Localidad" Width="128px" ValidationGroup="GrupoEliminar" />
                     </td>
                     <td class="auto-style10">
                         <asp:Label ID="lblCantLocalidades" runat="server" ForeColor="Gray"></asp:Label>
