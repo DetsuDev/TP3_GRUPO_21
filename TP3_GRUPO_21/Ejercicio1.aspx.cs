@@ -45,6 +45,9 @@ namespace TP3_GRUPO_21
             if (Page.IsValid)
             {
                 ddlLocalidades.Items.Add(new ListItem(txtLocalidad.Text.Trim()));
+                txtLocalidad.Text = "";
+                lblCantLocalidades.Text = "Localidades cargadas: " + ddlLocalidades.Items.Count;
+
             }
         }
 

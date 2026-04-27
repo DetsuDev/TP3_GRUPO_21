@@ -91,7 +91,9 @@
                     <td class="auto-style2">
                         <asp:Button ID="btnGuardarLoc" runat="server" Text="Guardar Localidad" OnClick="btnGuardarLoc_Click" ValidationGroup="GrupoLocalidad" />
                     </td>
-                    <td class="auto-style10">&nbsp;</td>
+                    <td class="auto-style10">
+                        <asp:Label ID="lblCantLocalidades" runat="server" ForeColor="Gray"></asp:Label>
+                    </td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
@@ -186,18 +188,15 @@
                 </tr>
                 <tr>
                     <td class="auto-style3">&nbsp;</td>
-                    <td class="auto-style2">
-                        &nbsp;</td>
-                    <td class="auto-style10">
-                        &nbsp;</td>
+                    <td class="auto-style2">&nbsp;</td>
+                    <td class="auto-style10">&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style3">
                         <asp:Button ID="btnInicio" runat="server" Text="Ir a inicio.aspx" OnClick="btnInicio_Click" CausesValidation="false" />
                     </td>
-                    <td class="auto-style2">
-                        &nbsp;</td>
+                    <td class="auto-style2">&nbsp;</td>
                     <td class="auto-style10">&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
