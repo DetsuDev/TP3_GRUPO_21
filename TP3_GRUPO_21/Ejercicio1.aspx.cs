@@ -46,11 +46,20 @@ namespace TP3_GRUPO_21
             {
                 ddlLocalidades.Items.Add(new ListItem(txtLocalidad.Text.Trim()));
                 txtLocalidad.Text = "";
-                lblCantLocalidades.Text = "Localidades cargadas: " + ddlLocalidades.Items.Count;
+                lblCantLocalidades.Text = "Localidades cargadas: " + (ddlLocalidades.Items.Count - 1);
 
             }
         }
+        protected void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            txtUsuario.Text = "";
+            txtPassword.Text = "";
+            txtRepetirPassword.Text = "";
+            txtEmail.Text = "";
+            txtCP.Text = "";
+            ddlLocalidades.SelectedIndex = 0;
+            lblBienvenido.Text = "";
+        }
 
-       
     }
 }

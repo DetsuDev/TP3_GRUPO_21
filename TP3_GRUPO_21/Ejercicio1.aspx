@@ -195,6 +195,7 @@
                 <tr>
                     <td class="auto-style3">
                         <asp:Button ID="btnInicio" runat="server" Text="Ir a inicio.aspx" OnClick="btnInicio_Click" CausesValidation="false" />
+                        <asp:Button ID="btnLimpiar" runat="server" Text="Limpiar Campos" OnClick="btnLimpiar_Click" CausesValidation="false" />
                     </td>
                     <td class="auto-style2">&nbsp;</td>
                     <td class="auto-style10">&nbsp;</td>
